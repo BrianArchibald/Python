@@ -62,3 +62,37 @@ age = 0
 while age < 18:
     print(age)
     age += 1
+
+    # Dictionary
+dogs = {"Fido":8, "Sally":17}
+
+print(dogs["Sally"]) # 17
+del(dogs["Sally"])
+dogs["Sarah"] = 6 # add
+
+
+# Classes 
+
+class Dog:
+    def bark(self):
+        print("Bark")
+
+mydog = Dog()
+mydog.bark()
+
+mydog.name = "Fido"
+
+# init functions with Classes
+class Dog:
+
+    def __init__(self, name, age, fur):
+        self.name = name
+        self.age = age
+        self.fur = fur
+
+    def bark(self):
+        print("Bark")
+
+mydog = Dog("Fido", 13, "Brown")
+
+
