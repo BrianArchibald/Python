@@ -24,7 +24,11 @@ else:
 
         # comments or """ multi line """
         # if name == "Brian" or !=
-        ########  Functions ###########
+
+
+
+
+########  Functions ###########
 
 def hello():
     print("hello")
@@ -187,7 +191,7 @@ for item in zip(mylist1, mylist2):
     (1, 'a')
     (2, 'b')
 
-list(zup(mylist1, mylist2)) [(1, 'a'),(2, 'b')]
+list(zip(mylist1, mylist2)) [(1, 'a'),(2, 'b')]
 
 # In operator
 
@@ -210,5 +214,68 @@ max(mylist)
     # python has built in random library
     # from random import ......
 
+from random import shuffle
+
+mylist = [1,2,3,4]
+shuffle(mylist) 
+# [3,2,4,1]
+
+# get random int
+from random import randint
+
+randint(0,100) #range
+79
+mynum = randint(1,10) # assign it to mynum
+
+# using input
+
+result = input('Enter a number here: ')
+Enter a number here: 
+
+# the input value is always a string
+# int(result) will turn it into an int
 
 
+
+# nested loops
+mylist = []
+
+for x in [2,4,6]:
+    for y in [100,200,300]:
+        mylist.append(x*y)
+# [200,400,600,400 etc..]
+
+
+# List Comprehensions  , unique way to quickly create a list
+mystring = 'Hello'
+
+mylist = []
+
+for letter in mystring:
+    mylist.append(letter)
+
+mylist = []
+mylist = [letter for letter in mystring]
+#['h', etc...]
+
+mylist = [x for x in 'word']
+mylist = [x for x in range(0,11) if x%2==0]
+
+## help method
+help(mylist.insert)
+#will give you info on the insert meto
+
+
+# *args  can add many arguments and not a set number, returns a tuple
+def myfunc(*args):
+    return sum(args)
+
+# **kwargs  keyword arguments,  returns a dictionary
+def myfunc(**kwargs):
+    if "fruit" in kwargs:
+        print('my fruit is {}'.format(kwargs["fruit"]))
+    else:
+        print("No fruit here")
+
+myfunc(fruit='apple')
+#my fruit is apple
