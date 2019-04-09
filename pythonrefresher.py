@@ -99,7 +99,7 @@ while age < 18:
     age += 1
 
 # Dictionary ###########
-    # A dictionary is a collection which is unordered, changeable and indexed. 
+    # A dictionary is a collection which is unordered, changeable and indexed.
     # In Python dictionaries are written with curly brackets, and they have keys and values.
 dogs = {"Fido": 8, "Sally": 17}
 
@@ -169,6 +169,20 @@ myset.add(1)
 mylist = [1, 1, 1, 2, 2, 2]
 set(nymlist)  # {1,2}
 
+
+mylist.remove(2) # will get error if 2 doesn't exist
+mylist.discard(4) # won't get an error if doesn't exist
+
+mylist.clear() #removes all items out of the set
+
+odds = set([1, 3, 5, 7, 9])
+evens = set([2,4,6,8,10])
+
+2 in evens
+True
+
+
+
 #  Comparison Operators ########
 
 1 < 2 and 2 < 3  # True is 1 less than 2 and 2 less than 3
@@ -182,7 +196,7 @@ word = 'abcde'
 for item in enumerate(word):
     print(item)  # (0, 'a')(1, 'b') etc..  tuples
 
-# Zip function 
+# Zip function
     # zips items together and returns tuples
     # extra items in 1 list will be ignored.
 mylist1 = [1,2]
@@ -210,14 +224,14 @@ mylist = [1,2,3]
 min(mylist)
 max(mylist)
 
-# Random function  
+# Random function
     # python has built in random library
     # from random import ......
 
 from random import shuffle
 
 mylist = [1,2,3,4]
-shuffle(mylist) 
+shuffle(mylist)
 # [3,2,4,1]
 
 # get random int
@@ -230,7 +244,7 @@ mynum = randint(1,10) # assign it to mynum
 # using input
 
 result = input('Enter a number here: ')
-Enter a number here: 
+Enter a number here:
 
 # the input value is always a string
 # int(result) will turn it into an int
