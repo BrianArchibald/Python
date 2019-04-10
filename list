@@ -78,6 +78,18 @@ mylist.sort()  # sorts list in place
 # or sorted
 sorted(mylist)
 
+
+# List comprehensions
+# these convert a list to another list
+
+
+favs = [1,1,2,3,4,8,13]
+
+doubled = [n * 2 for n in favs]
+
+cubed = [n ** 3 for n in favs if math.sqrt(n).is_integer()]
+
+
 #######  Loops ######
 for dog in dognames:
     print(dog)
