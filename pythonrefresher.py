@@ -181,7 +181,34 @@ evens = set([2,4,6,8,10])
 2 in evens
 True
 
-
+class AboutSets(Koan):
+  7     def test_sets_make_keep_lists_unique(self):
+  8         highlanders = ['MacLeod', 'Ramirez', 'MacLeod', 'Matunas', 'MacLeod', 'Malcolm', 'MacLeod']
+  9
+ 10         there_can_only_be_only_one = set(highlanders)
+ 11
+ 12         self.assertEqual({'Ramirez','MacLeod', 'Malcolm', 'Matunas'}, there_can_only_be_only_one)
+ 13
+ 14     def test_empty_sets_have_different_syntax_to_populated_sets(self):
+ 15         self.assertEqual({1, 2, 3}, {1, 2, 3})
+ 16         self.assertEqual(set(), set())
+ 17
+ 18     def test_dictionaries_and_sets_use_same_curly_braces(self):
+ 19         # Note: Literal sets using braces were introduced in python 3.
+ 20         #       They were also backported to python 2.7.
+ 21
+ 22         self.assertEqual(set, {1, 2, 3}.__class__)
+ 23         self.assertEqual(dict, {'one': 1, 'two': 2}.__class__)
+ 24
+ 25         self.assertEqual(dict, {}.__class__)
+ 26
+ 27     def test_creating_sets_using_strings(self):
+ 28         self.assertEqual({'12345'}, {'12345'})
+ 29         self.assertEqual({'1','2','3','4','5'}, set('12345'))
+ 30
+ 31     def test_convert_the_set_into_a_list_to_sort_it(self):
+ 32         self.assertEqual(['1','2','3','4','5'], sorted(set('12345')))
+ 33
 
 #  Comparison Operators ########
 
